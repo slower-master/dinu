@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>SSH</title>
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QY3W54BYH5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QY3W54BYH5');
+</script>
+</head>
+
+<body style="background-color:ghostwhite;padding-left: 100px;padding-right: 100px;">
+    <h1 style="display: flex;justify-content: center;color:blueviolet">How Does SSH Work</h1>
+    <h2 style="color:coral">What is SSH</h2>
+    <p style="text-decoration: none;">SSH(Secure Shell) is a remote administration protocol that allows users to
+        control(or modify) their remote
+        servers over the Internet. The service uses cryptographic techniques to ensure that all communication happens in
+        an encrypted
+        manner. It provides a mechanism for authenticating a remote user, transferring inputs from the client to the
+        host, and the output back to the client.</p>
+    <p>Any Linux or macOS user can use SSH directly from the terminal window. Windows users can
+        take advantage of SSH clients(for example -Putty).</p>
+    <h2 style="color:coral">How Does SSH Work</h2>
+    <p>For Linux and Mac users,using SSH is very simple.If you use Windows,you will need to setup SSH client(I prefer
+        PuTTY).</p>
+    <p>For Mac and Linux users ,Open your terminal program and follow the procedure below:</p>
+    <p>The SSH command consists of 3 distinct parts:</p>
+    <p style="padding-left: 20px;background-color:grey;padding-top: 10px;padding-bottom: 10px;border-radius: 20px;">ssh
+        {user}@{host}
+    </p>
+    <ol>
+        <li>The SSH key command instructs your system that you want to open an encrypted Secure Shell Connection.</li>
+        <li>{user} represents the account you want to access(the user on server).</li>
+        <li>{host} refers to the computer you want to access.This can be IP Address or a domain name</li>
+    </ol>
+    <p>
+        When you hit enter, you will be prompted to enter the password for the requested account. When you type it in,
+        nothing will appear on the screen, but your password is, in fact being transmitted. Once you’re done typing, hit
+        enter once again. If your password is correct, you will be greeted with a remote terminal window.</p>
+    <p>for more on SSH commands,find out <a style="text-decoration: none;color: blueviolet;">here</a> </p>
+    <h2 style="color:coral">Different Encryption Techniques</h2>
+    <p>Everyone like's SSH because of its p use of encryption to ensure secure transfer of information between the host
+        and the client.There are three different encryption technologies used by SSH:</p>
+    <ol>
+        <li>Symmetrical encryption</li>
+        <li>Asymmetrical encryption</li>
+        <li>Hashing.</li>
+    </ol>
+    <h2 style="color:lightseagreen">&nbsp; Symmetrical encryption</h2>
+    <p>Symmetric encryption is a form of encryption where a secret key is used for both encryption and
+        decryption of a
+        message by both the client and the host. Any one by the help of the secret-key can decrypt the message being
+        transferred.</p>
+    <p>There is usually only one key that is used, or sometimes a pair , where one key can easily be calculated using
+        the other key.</p>
+    <p>Symmetric keys are used to encrypt the entire communication during a SSH Session. Both the client and the server
+        derive the secret key using an agreed method(algorithm), and the resultant key is never disclosed to any third
+        party. The
+        process of creating a symmetric key is carried out by a key exchange algorithm. What makes this algorithm
+        particularly secure is the fact that the key is never transmitted between the client and the host. Instead, the
+        two computers share public pieces of data and then manipulate it to independently calculate the secret key. Even
+        if another machine captures the publically shared data, it won’t be able to calculate the key because the key
+        exchange algorithm is not known.</p>
+
+    <p>It must be noted, however, that the secret token is specific to each SSH session, and is generated prior to
+        client authentication. Once the key has been generated, all packets moving between the two machines must be
+        encrypted by the private key. This includes the password typed into the console by the user, so credentials are
+        always protected from network packet sniffers.</p>
+    <h2 style="color:lightseagreen">&nbsp; Asymmetrical encryption</h2>
+    <p>Asymmetrical encryption uses two separate keys for encryption and decryption. These two keys are known as the
+        public key and the private key. Together, both these keys form a public-private key pair.</p>
+    <p>
+        The public key is openly distributed and shared with all parties. While public key is closely
+        linked
+        with the private key in terms of functionality but the private key cannot be mathematically computed from the
+        public
+        key. The relation between the two keys is highly complex. A message that is encrypted by a machine’s public key,
+        can
+        only be decrypted by the same machine’s private key. Means that the public key cannot
+        decrypt
+        its own messages, nor can it decrypt anything encrypted by the private key.</p>
+    <p>
+        The private key must remain private i.e. for the connection to be secured, no third party must ever know it. The
+        strength of the entire connection lies in the fact that the private key is never revealed. Therefore, any party
+        with
+        the
+        capability to decrypt publically signed messages must possess the corresponding private key.</p>
+    <p>
+        Generally asymmetrical encryption is not used to encrypt the entire SSH session. Instead,
+        it is
+        only used during the key exchange algorithm of symmetric encryption.
+        In asymmetrical encryption,
+        both
+        parties generate temporary public-private key pairs, and share their respective private keys to produce the
+        shared
+        secret key.</p>
+    <p>
+        Once a secured symmetric communication has been established, the server uses the clients public key to generate
+        and
+        challenge and transmit it to the client for authentication. If the client can successfully decrypt the message,
+        it
+        means that it holds the private key required for the connection. The SSH session then begins.</p>
+    <h2 style="color:lightseagreen">&nbsp; Hashing</h2>
+    <p>Hashing is another form of cryptography used in Secure Shell Connections. One-way-hash functions differ
+        from the above two forms of encryption in the sense that they are never meant to be decrypted. They generate a
+        unique value of a fixed length for each input that shows no clear trend which can exploited. This makes them
+        practically impossible to reverse.It is easy to generate a cryptographic hash from a given input, but impossible
+        to generate the input from the hash.This means that if a client holds the correct input, they can generate the
+        crypto-graphic hash and compare its value to verify whether they possess the correct input.</p>
+    <h2 style="color:coral"> SSH and These Encryption Techniques</h2>
+    <p>The way SSH works is by making use of a client-server model to allow for authentication of two remote systems and
+        encryption of the data that passes between them.</p>
+    <p>There are two stages to establishing a connection: first both the systems must agree upon encryption standards to
+        protect future communications, and second, the user must authenticate themselves. If the credentials match, then
+        the user is granted access.</p>
+
+
+
+</body>
+
+</html>
