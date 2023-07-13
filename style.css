@@ -80,6 +80,7 @@ a {
     padding: 10px;
     text-align: center;
     background: #f6f4f4;
+    background: white;
 }
 
 .box1 {
@@ -199,11 +200,12 @@ button.message:hover {
 
 .cards {
     /* border: 2px solid #f5f8f9; */
-    /* border-radius: 5%; */
+    border-radius: 10px;
 
     width: 70vw;
     margin-left: 30px;
     margin-top: 30px;
+    /* background-color: white; */
     /* height: 100vh; */
     /* padding: 50px; */
 
@@ -216,12 +218,19 @@ button.message:hover {
     padding: 20px;
     border-radius: 1%;
     margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: white;
     /* width: auto; */
 }
 
 .cards a {
     text-decoration: none;
     color: #000;
+    font-weight: normal;
+}
+
+.card h4 {
+    font-weight: normal;
 }
 
 
@@ -260,6 +269,54 @@ button.message:hover {
     display: flex;
     flex-direction: column;
 }
+
+
+.blogmain {
+    margin-left: 30px;
+    margin-top: 50px;
+    padding: 20px;
+    border: 3px solid #f5f8f9;
+    width: 1200px;
+    border-radius: 20px;
+}
+
+.bloginfo {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bloghelper {
+    margin-top: 30px;
+
+    color: black;
+}
+
+.bloghelper a {
+    color: blue;
+}
+
+.bloghelper li {
+    list-style: circle;
+    position: relative;
+    left: 20px;
+}
+
+body {
+    background-color: #f5f8f9;
+}
+
+.blogmain {
+    background-color: white;
+}
+
+
+
+
+
+/* .cardinfo {
+    border-top: 1px solid #f5f8f9;
+} */
 
 @media only screen and (max-width: 1000px) {
     .box {
