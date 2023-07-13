@@ -280,6 +280,21 @@ button.message:hover {
     border-radius: 20px;
 }
 
+.blogactivity {
+    width: 1200px;
+    margin-left: 30px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: solid;
+    border-top: 3px solid #e9eced;
+    padding-top: 10px;
+}
+
 .bloginfo {
     margin-top: 20px;
     display: flex;
