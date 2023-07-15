@@ -360,7 +360,7 @@ body {
     /* float: left; */
     /* display: flex; */
     width: 275px;
-    height: 250px;
+    height: auto;
     border-radius: 10px;
     align-items: center;
 
@@ -394,9 +394,22 @@ body {
     border-top: 1px solid #f5f8f9;
 } */
 
+
+@media only screen and (max-width: 1200px) {
+    .blogmain {
+        width: 100%;
+        margin: 0;
+    }
+
+    .blogactivity {
+        width: 90%;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .box {
         width: 200px;
+
     }
 }
 
