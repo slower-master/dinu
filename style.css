@@ -5,7 +5,6 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
-    /* -webkit-text-size-adjust: 100%; */
 }
 
 .blog1body {
@@ -208,44 +207,31 @@ button.message:hover {
     border: 1px solid black;
 }
 
-
-/* div.desc {
-    padding: 15px;
-    text-align: center;
-} */
-
 /* Content-1:End */
 
 
 
 .maincontent {
     display: flex;
-    /* border: 2px solid #f5f8f9; */
 }
 
 .cards {
-    /* border: 2px solid #f5f8f9; */
     border-radius: 10px;
 
     width: 70vw;
     margin-left: 30px;
     margin-top: 30px;
-    /* background-color: white; */
-    /* height: 100vh; */
-    /* padding: 50px; */
 
 }
 
 
 .card {
-    /* width: 68vw; */
     border: 3px solid #f5f8f9;
     padding: 20px;
     border-radius: 1%;
     margin-bottom: 50px;
     border-radius: 10px;
     background-color: white;
-    /* width: auto; */
 }
 
 .cards a {
@@ -274,7 +260,6 @@ button.message:hover {
 
 .cardbutton {
     margin-top: 10px;
-    /* padding-top: 10px; */
 }
 
 .cardfooter {
@@ -287,7 +272,6 @@ button.message:hover {
 .cardtags {
     display: flex;
     justify-content: space-between;
-    /* width: 300px; */
 }
 
 .card {
@@ -357,8 +341,6 @@ body {
 .gallery {
     margin: 5px;
     border: 1px solid #ccc;
-    /* float: left; */
-    /* display: flex; */
     width: 275px;
     height: auto;
     border-radius: 10px;
@@ -381,18 +363,6 @@ body {
 }
 
 
-/* @supports (font-size-adjust: 1; ) {
-    section {
-        font-size-adjust: 0.5;
-    }
-} */
-
-
-
-
-/* .cardinfo {
-    border-top: 1px solid #f5f8f9;
-} */
 .container {
     max-width: 50vw;
     width: 100%;
@@ -538,7 +508,6 @@ fieldset {
 @media only screen and (max-width: 700px) {
     .container {
         width: 100vw;
-        /* width: 100%; */
         padding: 0;
         margin: 0;
     }
@@ -550,8 +519,6 @@ fieldset {
     .maincontent {
         display: flex;
         flex-direction: column;
-        /* align-items: center;
-        justify-content: center; */
     }
 
     #contact {
@@ -636,13 +603,7 @@ fieldset {
         justify-content: center;
         border-radius: 0%;
         margin: 0;
-        /*margin-right: 10px; */
     }
-
-    /* .box1 .box {
-        display: flex;
-        justify-content: center;
-    } */
 
     .button {
         display: flex;
@@ -676,14 +637,9 @@ fieldset {
 
     .card {
         margin-top: 20px;
-        /* border-top: 1px solid black; */
         border-bottom: 1px solid black;
     }
 
 }
-
-
-
-
 
 /* Responsiveness:End */
